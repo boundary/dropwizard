@@ -149,6 +149,9 @@
 
     <scm>
         <connection>scm:git:git@github.com:boundary/dropwizard.git</connection>
+        <url>scm:git:git@github.com:boundary/dropwizard.git</url>
+        <developerConnection>scm:git:git@github.com:boundary/dropwizard.git</developerConnection>
+        <tag>patch/0.7.1</tag>
     </scm>
 
     <issueManagement>
@@ -177,20 +180,6 @@
             <archive>https://groups.google.com/forum/#!forum/dropwizard-dev</archive>
         </mailingList>
     </mailingLists>
-
-    <repositories>
-        <repository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
     <distributionManagement>
         <repository>
