@@ -7,7 +7,7 @@
 
     <groupId>io.dropwizard</groupId>
     <artifactId>dropwizard-parent</artifactId>
-    <version>0.7.1</version>
+    <version>0.7.1-p01-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Dropwizard Project</name>
     <url>${dropwizard.url}</url>
@@ -148,10 +148,7 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/dropwizard/dropwizard.git</connection>
-        <developerConnection>scm:git:git@github.com:dropwizard/dropwizard.git</developerConnection>
-        <url>https://github.com/dropwizard/dropwizard</url>
-        <tag>v0.7.1</tag>
+        <connection>scm:git:git@github.com:boundary/dropwizard.git</connection>
     </scm>
 
     <issueManagement>
@@ -196,20 +193,16 @@
     </repositories>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>maven.boundary.com</id>
+            <name>maven.boundary.com-releases</name>
+            <url>http://maven.boundary.com/artifactory/external</url>
         </repository>
-        <site>
-            <id>dropwizard.io</id>
-            <url>${dropwizard.url}</url>
-        </site>
+        <snapshotRepository>
+            <id>maven.boundary.com</id>
+            <name>maven.boundary.com-snapshots</name>
+            <url>http://maven.boundary.com/artifactory/external</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <profiles>
