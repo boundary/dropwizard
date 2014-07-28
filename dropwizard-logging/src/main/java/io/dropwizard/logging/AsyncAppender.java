@@ -54,10 +54,17 @@ public class AsyncAppender extends AppenderBase<ILoggingEvent> {
 
                 events.clear();
             }
+
+            // flush any remaining events to the delegate and stop it
+            for (ILoggingEvent event : queue) {
+                delegate.doAppend(event);
+            }
+            delegate.stop();
         }
 
         public void shutdown() {
             this.running = false;
+            this.interrupt();
         }
     }
 
