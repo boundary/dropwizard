@@ -32,6 +32,8 @@ public class DropwizardResourceConfig extends ScanningResourceConfig {
     private static final Logger LOGGER = LoggerFactory.getLogger(DropwizardResourceConfig.class);
     private String urlPattern;
 
+    private volatile boolean resourcesLogged = false;
+
     public static DropwizardResourceConfig forTesting(MetricRegistry metricRegistry) {
         return new DropwizardResourceConfig(true, metricRegistry);
     }
@@ -60,9 +62,12 @@ public class DropwizardResourceConfig extends ScanningResourceConfig {
     public void validate() {
         super.validate();
 
-        logResources();
-        logProviders();
-        logEndpoints();
+        if (!resourcesLogged) {
+            logResources();
+            logProviders();
+            logEndpoints();
+            resourcesLogged = true;
+        }
     }
 
     public String getUrlPattern() {

@@ -116,8 +116,8 @@
             <version>0.4.3</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty.orbit</groupId>
-            <artifactId>javax.servlet</artifactId>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
             <version>${servlet.version}</version>
         </dependency>
         <dependency>
@@ -144,6 +144,10 @@
                 <exclusion>
                     <groupId>junit</groupId>
                     <artifactId>junit</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>javax.servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
