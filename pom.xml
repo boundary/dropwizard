@@ -53,10 +53,11 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <metrics3.version>3.0.2</metrics3.version>
         <jersey.version>1.18.1</jersey.version>
-        <jackson.api.version>2.3.0</jackson.api.version>
-        <jackson.version>2.3.3</jackson.version>
+        <jackson.api.version>2.4.1</jackson.api.version>
+        <jackson.datatype.version>2.4.1</jackson.datatype.version>
+        <jackson.version>2.4.2</jackson.version>
         <logback.version>1.1.2</logback.version>
-        <slf4j.version>1.7.6</slf4j.version>
+        <slf4j.version>1.7.7</slf4j.version>
         <servlet.version>3.1.0</servlet.version>
         <jetty.version>9.2.1.v20140609</jetty.version>
         <guava.version>17.0</guava.version>
@@ -257,6 +258,17 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
