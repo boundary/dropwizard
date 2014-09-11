@@ -12,6 +12,7 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 
 import org.apache.http.client.HttpRequestRetryHandler;
+import org.apache.http.config.Registry;
 import org.apache.http.conn.DnsResolver;
 import org.apache.http.conn.scheme.SchemeRegistry;
 
@@ -25,6 +26,7 @@ import com.sun.jersey.client.apache4.ApacheHttpClient4;
 import com.sun.jersey.client.apache4.ApacheHttpClient4Handler;
 import com.sun.jersey.client.apache4.config.ApacheHttpClient4Config;
 import com.sun.jersey.client.apache4.config.DefaultApacheHttpClient4Config;
+import org.apache.http.conn.socket.ConnectionSocketFactory;
 
 /**
  * A convenience class for building {@link Client} instances.
@@ -157,12 +159,12 @@ public class JerseyClientBuilder {
     }
 
     /**
-     * Use the given {@link SchemeRegistry} instance.
+     * Use the given {@link Registry} instance.
      *
-     * @param registry a {@link SchemeRegistry} instance
+     * @param registry a {@link Registry} instance
      * @return {@code this}
      */
-    public JerseyClientBuilder using(SchemeRegistry registry) {
+    public JerseyClientBuilder using(Registry<ConnectionSocketFactory> registry) {
         builder.using(registry);
         return this;
     }
