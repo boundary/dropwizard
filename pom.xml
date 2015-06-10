@@ -7,7 +7,7 @@
 
     <groupId>io.dropwizard</groupId>
     <artifactId>dropwizard-parent</artifactId>
-    <version>0.7.1-p09-SNAPSHOT</version>
+    <version>0.7.1-p10-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Dropwizard Project</name>
     <url>${dropwizard.url}</url>
@@ -182,14 +182,14 @@
 
     <distributionManagement>
         <repository>
-            <id>maven.boundary.com</id>
-            <name>maven.boundary.com-releases</name>
-            <url>http://maven.boundary.com/artifactory/external</url>
+            <id>artifact-01.boundary.us-west-2</id>
+            <name>artifact-01.boundary.us-west-2-releases</name>
+            <url>https://artifact-01.boundary.us-west-2/artifactory/external</url>
         </repository>
         <snapshotRepository>
-            <id>maven.boundary.com</id>
-            <name>maven.boundary.com-snapshots</name>
-            <url>http://maven.boundary.com/artifactory/external</url>
+            <id>artifact-01.boundary.us-west-2</id>
+            <name>artifact-01.boundary.us-west-2-snapshots</name>
+            <url>https://artifact-01.boundary.us-west-2/artifactory/external</url>
         </snapshotRepository>
     </distributionManagement>
 
